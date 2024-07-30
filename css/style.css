@@ -1,0 +1,154 @@
+:root {
+  --main-color: #2196f3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.start-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.67);
+  padding-top: 100px;
+}
+.start-div.hidden {
+  display: none;
+}
+.start-div div {
+  color: white;
+  width: 100px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.start-div div.easy {
+  background-color: #009688;
+}
+.start-div div.normal {
+  background-color: var(--main-color);
+}
+.start-div div.hard {
+  background-color: red;
+}
+.game {
+  background-color: #eee;
+  min-height: 100vh;
+}
+
+.game .name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game .container {
+  margin: auto;
+  max-width: 900px;
+  text-align: center;
+}
+.game .container .message {
+  background-color: white;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  text-align: center;
+}
+.game .container .message span {
+  font-weight: bold;
+  color: #009688;
+}
+
+.game .container .message span::before {
+  content: "[ ";
+}
+.game .container .message span::after {
+  content: " ]";
+}
+.game .container .start {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #009688;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+.game .container .the-word {
+  text-align: center;
+  font-weight: bold;
+  font-size: 60px;
+  color: var(--main-color);
+  user-select: none;
+}
+.game .container .input {
+  margin: 15px auto;
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 3px solid var(--main-color);
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: 6px;
+  caret-color: var(--main-color);
+}
+.game .container .input:focus {
+  outline: none;
+}
+.game .container .input.hidden {
+  display: none;
+}
+.game .container .upcoming-words {
+  background-color: white;
+  margin: 15px 0;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game .container .upcoming-words div {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  margin: 4px;
+  padding: 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
+.game .container .control {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 15px;
+}
+.game .container .control span {
+  font-weight: bold;
+  color: #009688;
+}
+.game .container .finish {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  padding: 15px;
+}
+.game .container .finish .good {
+  color: var(--main-color);
+}
+.game .container .finish .bad {
+  color: red;
+}
